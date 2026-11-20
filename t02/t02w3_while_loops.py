@@ -124,3 +124,95 @@ def main():
 
 if __name__ == "__main__":
   main()
+
+# 8 Break and Continue 1. Add a break statement in the while loop, so that it terminates the loop once the user enters a number bigger than 100.
+
+def get_a_big_number():
+    num = 0
+    while True:
+      num = int(input("Please enter a number: "))
+      if num > 100:
+            break
+    return num
+
+
+def main():
+  valid_number = get_a_big_number()
+  print("The number is", valid_number)
+
+
+if __name__ == "__main__":
+  main()
+
+# 8 Break and Continue 
+
+n = 0
+while True:
+  n += 1
+  if n % 5 == 0:
+    continue
+  if n == 9:
+    break
+  print(n) #  1, 2, 3, 4, 6, 7, 8 The loop skips the print of 5, and breaks before 9.
+  #___
+
+  domains = ["cnn.com", "website.net", "whatismyip.com", "example.net"]
+
+print("Printing only .com domains")
+for domain in domains:
+    if domain.endswith(".net"):
+        print("Skipping")
+        continue
+    print(f"Domain: {domain}") 
+
+#_________________________________
+# 9 CHAPTER ASSESSMENT
+
+# 9.1   Create a while loop that has a counter from 1 to 20 (inclusive).
+#   If the value of the counter is divisible by 5, just skip it using continue. For the rest of the numbers, print the number. Each number should appear in a new line.
+
+counter = 0
+while counter < 20:
+    counter += 1
+    if counter % 5 == 0:
+        continue
+    print(counter)
+
+#  9.2 Write a function, until_stop, that gets a list of strings as the parameter. In the function, use a while loop to return a sublist of the input list.
+#   The sublist should contain the same values of the original list until it reaches the string “STOP”. The new list should not contain the string “STOP”.
+#   Note: the word STOP doesn’t have to appear in the list. If the word “STOP” did not appear in the list, the returned list should be a copy of the original one.
+# For example, running until_stop(["hey", "joe", "meow", "STOP", "Hello"]) should return the list ["hey", "joe", "meow"].
+
+def until_stop(list_of_strings):
+    index = 0
+    list_copy_until_stop = []
+    while index < len(list_of_strings):
+        if list_of_strings[index].lower() == 'stop':
+            break
+        list_copy_until_stop.append(list_of_strings[index])
+        index += 1
+    return(list_copy_until_stop) #sublist should contain the same values as original until STOP, stop is no requirement tho in list
+
+list1 = ["hey", "joe", "meow", "STOP", "Hello"]
+list2 = ["hey", "joe", "meow"]
+
+print(until_stop(list1))
+print(until_stop(list2))
+
+
+# 9.3 Write a program that implements a listener pattern, and asks for input from the user constantly. For every string entered, it displays the length of it and the number of words in it. If the string is empty, it will just be skipped using continue. If the input string is “break”, break out of the loop.
+
+def main():
+    user_input = ''
+    while user_input.lower() != 'break':
+        user_input = input('For what you enter, you will find out \na) how many characters you typed and \nb) the number of words.\nPlease type something:')
+        if user_input == "":
+            continue
+        if user_input.lower() == "break":
+            break
+        print(f'You typed {len(user_input)} characters.')
+        print(f'You thought of {len(user_input.split())} words, good job!')
+
+
+if __name__ == '__main__':
+    main()

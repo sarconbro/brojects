@@ -35,8 +35,8 @@ def get_price_and_amount():
     amount = float(input_amount.strip('$') )
     return price, amount
 
-def calculate_price_plus_tax(price, tax_rate=0.115): # tax rate is 11.5%
-    price_plus_tax = price * (1 + tax_rate)
+def calculate_price_plus_tax(price, tax_rate=11.5): # tax rate is 11.5%
+    price_plus_tax = price * (1 + tax_rate / 100)
     return price_plus_tax
 
 def calculate_change_for_customer(price_plus_tax, amount):
