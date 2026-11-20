@@ -1,0 +1,126 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Helvetica, Arial, sans-serif;
+    color: white;
+    /* dunkler Verlauf über dem Bild, damit der Text lesbar ist */
+    background-image:
+        /*linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)),*/
+        url("background.jpg");
+        /* könnte auch sein: */
+        background-color: rgba(0, 0, 0, 0.254);
+        background-blend-mode: overlay;
+    background-size: cover;
+    background-position: center;
+}
+
+/* ---------- Navigation ---------- */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px;
+}
+
+.logo {
+    color: #e50914;
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.nav-right {
+    display: flex;
+    gap: 12px;
+}
+
+.lang-btn {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 4px;
+    padding: 6px 12px;
+    font-size: 14px;
+}
+
+.signin-btn {
+    background-color: #e50914;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 6px 14px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* ---------- Hauptbereich ---------- */
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 80vh;
+    padding: 0 20px;
+}
+
+.main-content h1 {
+    max-width: 640px;
+    margin: 0 0 16px;
+    font-size: 56px;
+    font-weight: 900;
+    line-height: 1.15;
+}
+
+.price {
+    margin: 0 0 32px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.cta {
+    margin: 0 0 16px;
+    font-size: 16px;
+}
+
+/* ---------- E-Mail-Formular ---------- */
+
+.email-form {
+    display: flex;
+    gap: 8px;
+}
+
+.email-form input {
+    width: 360px;
+    padding: 16px;
+    font-size: 16px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 4px;
+}
+
+.email-form input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.email-form button {
+    padding: 0 24px;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    background-color: #e50914;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.email-form button:hover {
+    background-color: #c11119;
+}

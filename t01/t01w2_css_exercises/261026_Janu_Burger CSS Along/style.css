@@ -1,0 +1,121 @@
+body {
+
+    background-color: burlywood;
+
+    font-size: 1.4rem;
+
+    margin: 0;
+
+}
+
+ 
+
+nav {
+
+    background-color: rgb(158, 107, 41);
+
+    position: relative;
+
+}
+
+ 
+
+nav div {
+
+    position: relative;
+
+    display: inline-block;
+
+    padding: 30px 60px;
+
+}
+
+ 
+
+nav div a {
+
+    color: white;
+
+    text-decoration: none;
+
+}
+
+nav div:hover a {
+
+    color: black
+
+}
+
+ 
+
+nav div:hover {
+
+    background-color: bisque;
+
+}
+
+ 
+
+nav div ul {
+
+    list-style: none;
+
+    background-color: rgb(158, 107, 41);
+
+    width: 200px;
+
+    left: 0px;
+
+    top: 64px;
+
+    display:none;
+
+    position: absolute;
+
+}
+
+ 
+
+div:hover ul {
+
+    display: block;
+
+}
+
+ 
+
+ul li {
+
+    color: white;
+
+    line-height: 50px;
+
+}
+
+ 
+
+ul li:hover {
+
+    color: black;
+
+}
+
+ 
+
+nav button {
+
+    background-color: bisque;
+
+    color: black;
+
+    border: none;
+
+    padding: 20px;
+
+    top: 15px;
+
+    right:30px;
+
+    position: absolute;
+
+}

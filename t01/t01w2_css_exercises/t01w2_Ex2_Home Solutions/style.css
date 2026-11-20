@@ -1,0 +1,116 @@
+body {
+  background: linear-gradient(to bottom right, #0081b9, #65b6d1);
+  min-height: 100vh;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+
+
+main {
+  border-radius: 10px;
+  overflow: hidden;
+  width: 90%;
+  max-width: 460px; /*mobile 90% viewport, aber höchstens 460px. laptop hat width 60% und max-width 700px, weil ab 768px 60 % genau 460px sind - umspringen flüssiger*/
+  display: flex;
+  flex-direction: column;
+  }
+
+.logo {
+  background-color: #004C6D;
+  padding: 20px;
+  color: #d8e7ff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  }
+
+
+.login {
+  background-color: white;
+  padding: 10px 20px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  }
+
+
+h1{
+  font-size: 25px;
+  }
+
+
+h2 {
+  color: #004C6D;
+  font-size: 20px;
+  }
+
+
+a {
+  color:#0081b9;
+  text-decoration: none;
+  }
+
+
+button {
+  background-color: #004C6D;
+  padding: 10px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  }
+
+
+input {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  border-color: #B3B9BC;
+  border-style: solid;
+  border-width: 1px;
+  }
+
+
+#register {
+  margin-top: 20px;
+  font-size: 15px;
+  }
+
+
+.logo img{
+  width: 200px;
+  }
+
+
+@media (min-width: 768px){
+
+  main {  
+    flex-direction: row;
+    width: 60%; /*60% von 768px sind 460px, also break point bei mobile main */
+    max-width: 700px;
+  }
+
+  .login {
+    flex-grow: 1;
+  }
+
+
+  .logo {
+    flex-grow: 1;
+    justify-content: center;
+  }
+
+  .logo img {
+    width: 60%;
+    max-width: 200px;
+  }
+
+  h1 {
+    font-size: clamp(14px, 2vw, 25px);
+  }
+
+}
